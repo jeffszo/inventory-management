@@ -33,7 +33,7 @@ function App() {
           textAlign={"center"}
           color={"#fff"}
         >
-          Gerenciamento de <Text color="teal">estoque</Text>{" "}
+           Gerenciamento de <Text color="teal">estoque</Text>{" "}
         </Text>
       </Container>
       <ProductForm onAdd={addProduct} />

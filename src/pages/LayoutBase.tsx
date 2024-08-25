@@ -1,26 +1,35 @@
 import { Container, Text } from "@chakra-ui/react";
 import { ProductForm } from "../components/ProductForm";
+import { CgShutterstock } from "react-icons/cg";
 
 export function LayoutBase() {
-    return (
-        <Container
-      mt={"5rem"}
+  return (
+    <Container
+      mt={"7rem"}
       maxW={"100%"}
       display={"flex"}
       flexDirection={"column"}
       justifyContent={"center"}
     >
-      <Container display={'flex'} justifyContent={'center'}>
+      <Container
+        maxW={'100%'}
+        display={"flex"}
+        alignItems={"center"}
+        justifyContent={"center"}
+        gap={'0.3rem'}
+        
+      >
+        <CgShutterstock color="teal" size={35} />
         <Text
+          maxW={'100%'}
           fontWeight={"700"}
-          fontSize={"28px"}
-          textAlign={"center"}
+          fontSize={"32px"}
           color={"#fff"}
         >
-          Gerenciamento de <Text color="teal">estoque</Text>{" "}
+            Stock
         </Text>
       </Container>
-      <ProductForm/>
+      <ProductForm />
     </Container>
-    )    
-};
+  );
+}

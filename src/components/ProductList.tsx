@@ -47,15 +47,16 @@ export function ProductList() {
                             bg={"#05111a"}
                             maxW={"100%"}
                             display={"flex"}
-                            width={'100%'}
+                            justifyContent={'space-around'}
+                            width={'55rem'}
                             key={product.id}
                             alignItems={"center"}
                         >
                             <RiShoppingCartLine color={'gray'} size={25} />
-                            <Text color={'gray'} fontWeight={'600'}>Nome: {product.name}</Text>
-                            <Text color={'gray'} fontWeight={'600'}> | Quantidade: {product.quantity}</Text>
-                            <Text color={'gray'} fontWeight={'600'}> | Preço: ${product.price}</Text>
-                            <Text color={'gray'} fontWeight={'600'}> | Descrição: {product.description}</Text>
+                            <Text color={'gray'} fontWeight={'600'}>  Nome: {product.name}</Text>
+                            <Text color={'gray'} fontWeight={'600'}>  Quantidade: {product.quantity}</Text>
+                            <Text color={'gray'} fontWeight={'600'}>  Preço: ${product.price}</Text>
+                            <Text color={'gray'} fontWeight={'600'}>  Tipo: {product.type}</Text>
                             <Button
                                 rightIcon={<MdDelete />}
                                 colorScheme="teal"
@@ -74,7 +75,7 @@ export function ProductList() {
                 <ModalOverlay />
                 <ModalContent bg='red.200'>
                     <ModalHeader display={'flex'} alignItems={'center'} gap={'0.5rem'}>
-                        <Text fontWeight={'600'} color={'black'}>Produto</Text> <FiShoppingCart />
+                    <FiShoppingCart />  <Text fontWeight={'600'} color={'black'}>Produto</Text>
                     </ModalHeader>
                     <ModalCloseButton />
                     <ModalBody>
