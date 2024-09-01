@@ -8,6 +8,8 @@ import { RiShoppingCartLine } from "react-icons/ri";
 import { MdDelete } from "react-icons/md";
 import { FiShoppingCart } from "react-icons/fi";
 
+
+
 export function ProductList() {
     const { products, removeProduct } = useProductContext();
     const { isOpen, onOpen, onClose } = useDisclosure();

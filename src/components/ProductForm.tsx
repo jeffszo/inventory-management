@@ -36,10 +36,15 @@ export function ProductForm() {
             setName('');
             setQuantity(0);
             setPrice('1.00');
-            setProductType('Físico'); // Reset to default
-            onOpen(); // Open success modal
+            setProductType('Físico'); 
+            onOpen();
         }
     };
+
+    const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+        const newType = e.target.value as ProductType; 
+        setProductType(newType);
+      };
 
     const goToLayoutList = () => {
         navigate('/listagem');
@@ -101,7 +106,7 @@ export function ProductForm() {
 
                         }
                     }}
-                    onChange={(e) => setProductType(e.target.value)}
+                    onChange={handleChange}
                 >
                     {productTypes.map(type => (
                         <option key={type} value={type}>
